@@ -82,7 +82,7 @@
   background-color: #FBFBFB;
 
   @include _430 {
-    padding: 68px 0;
+    padding: 68px 0 120px;
   }
 
   &__inner {
@@ -139,13 +139,26 @@
   }
 
   &__subtitle {
+    position: relative;
     display: inline-block;
     font-size: 22px;
     font-weight: 600;
     color: #2B2E34;
 
     @include _430 {
-      font-size: 16px;  
+      padding-left: 25px;
+      font-size: 16px;
+      
+      &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: -8px;
+        bottom: 0;
+        background-image: url(../images/filter-icon.svg);
+        background-repeat: no-repeat;
+      }
     }
   }
 
@@ -185,7 +198,7 @@
 
   &__sort-btn {
     position: relative;
-    padding-right: 28px;
+    padding-right: 31px;
     font-size: 16px;
     font-weight: 600;
     color: #2B2E34;
@@ -208,22 +221,22 @@
     }
 
     &::before {
-      right: 6px;
+      right: 8px;
       transform: translateY(-50%) rotate(45deg);
     }
 
     &::after {
-      right: 0px;
+      right: 2px;
       transform: translateY(-50%) rotate(-45deg);
     }
 
     &--active {
       &::before {
-        right: 0px;
+        right: 2px;
       }
 
       &::after {
-        right: 6px;
+        right: 8px;
       }
     }
 
@@ -269,6 +282,21 @@
     font-weight: 600;
     color: #2B2E34;
     margin-right: 6px;
+  }
+
+  &__more {
+    max-width: 102px;
+    display: block;
+    padding: 0 ;
+    width: 100%;
+    margin: 34px auto 0;
+    font: 15px;
+    letter-spacing: -0.5px;
+    border-bottom: 2px solid #2B2E34;
+    color: #2B2E34;
+    border: transparent;
+    outline: transparent;
+    background-color: transparent;
   }
 }
 

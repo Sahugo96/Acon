@@ -21,7 +21,7 @@
     margin: 8px auto 39px;
 
     @include _430 { 
-      margin: 8px auto 9px;
+      margin: 8px auto 8px;
       max-width: 152px;
       max-height: 147px;
     }
@@ -36,10 +36,10 @@
     margin-bottom: 19px;
 
     @include _430 {
-      margin-bottom: 16px;
-      padding: 0 14px;
+      margin-bottom: 18px;
+      padding: 0 13px;
       font-size: 14px;
-      line-height: 1.4;
+      line-height: 1.35;
     }
   }
 
@@ -60,6 +60,7 @@
 
     @include _430 {
       font-size: 16px;
+      margin-bottom: 8px;
     }
     
     &::after {
