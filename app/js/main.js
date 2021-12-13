@@ -44,6 +44,8 @@ $('.form-search__input').focusout(function () {
 });
 
 $('.product-list__sort-btn').on('click', function () {
+  $('.product-list__sort-btn').toggleClass('product-list__sort-btn--active');
+  $('.product-list__wrapper').toggleClass('product-list__wrapper--active');
   $('.product-list__filters').slideToggle();
 });
 

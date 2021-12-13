@@ -58,6 +58,7 @@
     display: none;
 
     @include _430 {
+      margin-right: 5px;
       width: 27px;
       font-size: 0;
       background-image: url(../images/arrow.svg);
@@ -124,7 +125,15 @@
         }
 
         @include _430 {
-          display: none;
+
+          position: absolute;
+          top: 18px;
+          right: 25px;
+
+          &::before,
+          &::after {
+            width: 28px;
+          }
         }
       }
     }

@@ -10,6 +10,7 @@
 
   @include _430 {
     max-width: 177px;
+    margin-bottom: 15px;
   }
 
   &__img {
@@ -20,7 +21,9 @@
     margin: 8px auto 39px;
 
     @include _430 { 
+      margin: 8px auto 9px;
       max-width: 152px;
+      max-height: 147px;
     }
   }
 
@@ -33,6 +36,8 @@
     margin-bottom: 19px;
 
     @include _430 {
+      margin-bottom: 16px;
+      padding: 0 14px;
       font-size: 14px;
       line-height: 1.4;
     }
@@ -42,6 +47,10 @@
     padding-left: 31px;
     display: flex;
     align-items: center;
+
+    @include _430 {
+      padding-left: 14px;
+    }
   }
 
   &__cost {
@@ -62,6 +71,8 @@
       color: #2B2E34;
 
       @include _430 {
+        margin-top: 2px;
+        margin-left: 2px;
         font-size: 11px;
       }
     }
@@ -70,22 +81,27 @@
   &__second-cost {
     margin-bottom: 3px;
     position: relative;
-    padding-left: 12px;
+    padding-left: 20px;
     font-size: 15px;
     color: #7E838C;
     display: none;
 
     @include _430 {
+      padding-left: 32px;
       font-size: 12px;
+      margin-bottom: 9px;
     }
 
     &::after {
-      margin-top: 2px;
-      margin-left: 3px;
+      content: "₽";
+      position: absolute;
+      margin-top: -2px;
+      margin-left: 0px;
       font-size: 8px;
       color: #7E838C;
 
       @include _430 {
+        margin-top: -1;
         font-size: 7px;
       }
     }
@@ -101,6 +117,13 @@
       z-index: 3;
       transform: rotate(-9.99deg);
       background-color: #F31B4F;
+
+      @include _430 {
+        height: 1.5px;
+        width: 75%;
+        bottom: 8px;
+        right: -8px;
+      }
     }
   }
   

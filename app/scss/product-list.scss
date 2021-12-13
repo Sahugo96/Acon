@@ -118,7 +118,11 @@
     margin-bottom: 59px;
 
     @include _430 {
-      margin-bottom: 0;
+      margin-bottom: 0px;
+      
+      &--active {
+        margin-bottom: 45px;
+      }
     }
   }
 
