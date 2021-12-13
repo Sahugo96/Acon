@@ -310,6 +310,10 @@
   
   @include _430 {
     max-width: 370px;
+
+    &__item:nth-child(3n) {
+      display: none;
+    }
   }
 }
 
