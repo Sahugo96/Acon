@@ -43,6 +43,10 @@ $('.form-search__input').focusout(function () {
 
   }
 });
+
+$('.product-list__sort-btn').on('click', function () {
+  $('.product-list__filters').slideToggle();
+});
   // $('.button-list').on('click', function () {
   //   $('.product-list__pagination').addClass('product-list__pagination--list');
   // });
