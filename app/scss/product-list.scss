@@ -37,7 +37,7 @@
 
     @include _430 {
       font-size: 28px;
-      margin-bottom: 12px;
+      margin-bottom: 11px;
     }
   }
 
@@ -48,7 +48,7 @@
 
     @include _430 {
       max-width: 320px;
-      margin: 0 auto 45px;
+      margin: 0 auto 46px;
       font-size: 15px;
     }
   }
@@ -69,7 +69,7 @@
 
     @include _430 {
       font-size: 15px;
-      padding: 17px 41px 17px 104px;
+      padding: 17px 43px 17px 104px;
       background-position: 33px center;
       background-size: 16%;
     }
@@ -146,15 +146,16 @@
     color: #2B2E34;
 
     @include _430 {
-      padding-left: 25px;
+      padding-left: 28px;
       font-size: 16px;
+      letter-spacing: 0.3px;
       
       &::before {
         content: "";
         width: 24px;
         height: 24px;
         position: absolute;
-        left: -8px;
+        left: -5px;
         bottom: 0;
         background-image: url(../images/filter-icon.svg);
         background-repeat: no-repeat;
@@ -198,7 +199,7 @@
 
   &__sort-btn {
     position: relative;
-    padding-right: 31px;
+    padding-right: 28px;
     font-size: 16px;
     font-weight: 600;
     color: #2B2E34;
@@ -221,22 +222,22 @@
     }
 
     &::before {
-      right: 8px;
+      right: 6px;
       transform: translateY(-50%) rotate(45deg);
     }
 
     &::after {
-      right: 2px;
+      right: 0px;
       transform: translateY(-50%) rotate(-45deg);
     }
 
     &--active {
       &::before {
-        right: 2px;
+        right: 0px;
       }
 
       &::after {
-        right: 8px;
+        right: 6px;
       }
     }
 
@@ -266,9 +267,8 @@
     color: #7E838C;
     
     &--mobile {
-      padding-left: 4px;
       margin-bottom: 30px;
-      padding-left: 6px;
+      padding-left: 8px;
       display: none;
 
       @include _430 {
@@ -292,11 +292,11 @@
     margin: 34px auto 0;
     font: 15px;
     letter-spacing: -0.5px;
-    border-bottom: 2px solid #2B2E34;
     color: #2B2E34;
     border: transparent;
     outline: transparent;
     background-color: transparent;
+    border-bottom: 2px solid #2B2E34;
   }
 }
 
