@@ -1,0 +1,136 @@
+.header {
+  transition: height 0.3s linear;
+
+  &--active {
+    background-color: #FBFBFB;
+
+    @include _430 {
+      background-color: #fff;
+    }
+  }
+  
+  &__top {
+    padding: 17px 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include _430 {
+      padding: 17px 0 0;
+    }
+  }
+
+  &__btn-menu {
+    margin-right: 8px;
+
+    @include _430 {
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    max-width: 276px;
+    max-height: 66px;
+    object-fit: contain;
+    margin-right: 6px;
+
+    @include _430 {
+      margin-right: 17px;
+      max-width: 186px;
+    }
+
+    .logo__img {
+      display: block;
+
+      @include _430 {
+        display: none;
+      }
+
+      &--mini {
+        display: none;
+
+        @include _430 {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__form-search {
+
+    @include _430 {
+      order: 4;
+    }
+  }
+
+  &__results {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background-color: #FBFBFB;
+    display: none;
+
+    @include _430 {
+      background-color: #fff;
+      padding: 0 20px;
+      top: 179px;
+    }
+  }
+
+  &__list {
+    max-width: 665px;
+    margin: 36px auto 75px;
+  }
+
+  &__result {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__result-btn {
+    background-color: transparent;
+    outline: transparent;
+    border: transparent;
+    font-size: 16px;
+    padding: 6px 0;
+    color: #2B2E34;
+  }
+
+  &__bottom {
+    padding: 28px 0 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include _430 {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #2B2E34;
+
+    span {
+      padding-top: 2px;
+    }
+  }
+  
+  &__img {
+    max-width: 23px;
+    max-height: 24px;
+    object-fit: contain;
+    margin-right: 15px;
+
+    &--contacts,
+    &--application {
+      margin-right: 13px;
+    }
+  }
+}

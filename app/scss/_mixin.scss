@@ -1,0 +1,13 @@
+@mixin _430 {
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
+@mixin line-camp {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

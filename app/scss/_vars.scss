@@ -1,0 +1,72 @@
+$main: #436372;
+$main-light: #a3bbc8;
+$main-dark: #243f4d;
+
+$sky: #edf1f4;
+
+$bg-light: #fef7f0;
+$bg-medum: #feefe2;
+$bg-dark: #fcd7b6;
+
+$black: #333333;
+
+
+%EuclidCircular-600 {
+  font-family: 'Euclid Circular A';
+  font-weight: 600;
+}
+
+%EuclidCircular-400 {
+  font-family: 'Euclid Circular A';
+  font-weight: 400;
+}
+
+%EuclidCircular-300 {
+  font-family: 'Euclid Circular A';
+  font-weight: 300;
+}
+
+%Circe-700 {
+  font-family: 'Circe';
+  font-weight: 700;
+}
+
+%Circe-300 {
+  font-family: 'Circe';
+  font-weight: 300;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+%link-style {
+  outline: transparent;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s, color 0.3s;
+
+  &:active {
+    color: $bg-dark;
+  }
+  
+  &:hover {
+    color: $main-light;
+  }
+  
+  &:focus {
+    outline: transparent;
+    border-bottom: 1px solid #8b4949;
+  }
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

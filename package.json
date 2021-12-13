@@ -1,0 +1,37 @@
+{
+  "name": "acon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin": "^8.0.0",
+    "ion-rangeslider": "^2.3.1",
+    "jquery": "^3.6.0",
+    "mixitup": "^3.3.1"
+  },
+  "devDependencies": {
+    "cli": "^1.0.1",
+    "sass": "^1.44.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sahugo96/Acon.git"
+  },
+  "author": "Dima Sanchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sahugo96/Acon/issues"
+  },
+  "homepage": "https://github.com/Sahugo96/Acon#readme"
+}

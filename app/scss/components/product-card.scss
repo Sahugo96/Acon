@@ -1,0 +1,156 @@
+.product-card {
+  max-width: 354px;
+  width: 100%;
+  margin-bottom: 34px;
+  border-radius: 2px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  @include _430 {
+    max-width: 177px;
+  }
+
+  &__img {
+    display: block;
+    max-width: 288px;
+    max-height: 292px;
+    object-fit: contain;
+    margin: 8px auto 39px;
+
+    @include _430 { 
+      max-width: 152px;
+    }
+  }
+
+  &__name {
+    padding: 0 28px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #2B2E34;
+    margin-bottom: 19px;
+
+    @include _430 {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  &__wrapper {
+    padding-left: 31px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__cost {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+
+    @include _430 {
+      font-size: 16px;
+    }
+    
+    &::after {
+      content: "₽";
+      position: absolute;
+      margin-top: 1px;
+      margin-left: 3px;
+      font-size: 13px;
+      color: #2B2E34;
+
+      @include _430 {
+        font-size: 11px;
+      }
+    }
+  }
+
+  &__second-cost {
+    margin-bottom: 3px;
+    position: relative;
+    padding-left: 12px;
+    font-size: 15px;
+    color: #7E838C;
+    display: none;
+
+    @include _430 {
+      font-size: 12px;
+    }
+
+    &::after {
+      margin-top: 2px;
+      margin-left: 3px;
+      font-size: 8px;
+      color: #7E838C;
+
+      @include _430 {
+        font-size: 7px;
+      }
+    }
+
+    &::before {
+      width: 85%;
+      height: 2px;
+      border-radius: 2px;
+      content: "";
+      position: absolute;
+      bottom: 9px;
+      right: -16px;
+      z-index: 3;
+      transform: rotate(-9.99deg);
+      background-color: #F31B4F;
+    }
+  }
+  
+  &__buy-btn {
+    margin-left: auto;
+    border: transparent;
+    outline: transparent;
+    background-color: #38D3E8;
+    width: 82px;
+    height: 82px;
+
+    @include _430 {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  &__buy-img {
+    max-width: 21px;
+    max-height: 23px;
+    margin: 0 auto;
+  }
+
+  &--share {
+    position: relative;
+
+    &::after {
+      padding: 8px 23px 9px 43px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "Акция";
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.9);
+      background-color: #F31B4F;
+      border-radius: 2px 0px 0px 0px;
+      background-image: url(../images/percent.svg);
+      background-repeat: no-repeat;
+      background-position: 17px center;
+
+      @include _430 {
+        font-size: 12px;
+        padding: 8px 15px 6px 31px;
+        background-position: 9px 11px;
+        background-size: 15%;
+      }
+    }
+
+    .product-card__second-cost {
+      display: block;
+    }
+  }
+}

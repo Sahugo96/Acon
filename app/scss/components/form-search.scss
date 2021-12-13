@@ -1,0 +1,132 @@
+.form-search {
+  max-width: 851px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__inner {
+    max-width: 851px;
+    width: 100%;
+    padding: 10px 30px 10px 14px;
+    display: flex;
+    background-color: #f6f6f6;
+    transition: margin 0.3s linear, padding 0.3s linear;
+
+    @include _430 {
+      margin-top: 17px;
+      padding: 10px 0;
+      background-color: #fff;
+    }
+  }
+
+  &__label {
+    padding: 6px 14px 6px 15px;
+    
+    @include _430 {
+      padding-left: 0px;
+    }
+  }
+
+  &__img {
+    height: 22px;
+    width: 22px;
+  }
+
+  &__input,
+  &__reset {
+    background-color: transparent;
+    border: 0;
+    outline: transparent;
+  }
+
+  &__input {
+    width: 100%;
+
+    &::placeholder {
+      font-size: 15px;
+      color: #73737B;
+    }
+
+    &:focus ~ .form-search__reset {
+      display: block;
+    }
+  }
+
+  &__reset {
+    color: #2B2E34;
+    padding: 3px;
+    display: none;
+
+    @include _430 {
+      width: 27px;
+      font-size: 0;
+      background-image: url(../images/arrow.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+  }
+
+  &__close {
+    margin-left: 0px;
+    position: relative;
+    width: 0px;
+    height: 28px;
+    background-color: transparent;
+    outline: transparent;
+    border: 0;
+    transition: margin 0.3s linear, width 0.3s linear;
+    
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      top: calc(50% - 1px);
+      width: 36px;
+      height: 2px;
+      background-color: #2B2E34;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--active {
+    max-width: 1157px;
+    width: 100%;
+
+
+    .form-search {
+
+      &__inner {
+        max-width: 1059px;
+        width: 100%;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.13);
+        background-color: #fff;
+      
+        @include _430 {
+          margin-top: 75px;
+          padding: 10px 0 4px;
+        }
+      }
+
+      &__close {
+        margin-left: 65px;
+        width: 28px;
+
+        &::before,
+        &::after {
+          content: "";
+        }
+
+        @include _430 {
+          display: none;
+        }
+      }
+    }
+  }
+}

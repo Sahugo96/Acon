@@ -1,0 +1,173 @@
+.footer {
+  padding: 49px 0 33px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52px;
+
+    @include _430 {
+      margin-bottom: 17px;
+      padding-left: 2px;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    
+    @include _430 {
+      margin-bottom: 25px;
+    }
+
+    &:not(.footer__contacts) {
+      padding-top: 7px;
+    }
+  }
+
+  &__services {
+    padding-right: 3px;
+  }
+
+  &__logo {
+    max-width: 283px;
+    max-height: 66px;
+    margin-left: -4px;
+    margin-bottom: 56px;
+
+    @include _430 {
+      margin-bottom: 37px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    font-size: 16px;
+    color: #7E838C;
+    
+    &--phone, 
+    &--mail {
+      font-size: 18px;
+      color: #2B2E34;
+    }
+
+    &--phone {
+      margin-bottom: 20px;
+
+      span {
+        padding-left: 2px;
+      }
+    }
+
+    &--mail {
+      margin-bottom: 56px;
+
+      @include _430 {
+        margin-bottom: 37px;
+      }
+
+      span {
+        padding-top: 4px;
+      }
+    }
+
+    &--dev {
+      max-width: 278px;
+      width: 100%;
+      margin: -2px -1px 0 0;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__img {
+    max-width: 24px;
+    max-height: 27px;
+    margin-right: 11px;
+  }
+
+  &__work-time {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+
+    @include _430 {
+      margin-bottom: 38px;
+    }
+
+    span {
+      margin-left: 3px;
+    }
+  }
+
+  &__media {
+
+    @include _430 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__media-title {
+    display: block;
+    font-size: 18px;
+    color: #2B2E34;
+    margin-bottom: 20px;
+  }
+
+  &__social {
+    max-width: 238px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 11px;
+      margin-top: 1px;
+    }
+  }
+
+  &__contact-img {
+    max-width: 21px;
+    max-height: 15px;
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+    
+    @include _430 {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__elem {
+    margin-bottom: 12px;
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba(217, 218, 225, 0.8);
+    padding: 45px 0 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include _430 {
+      padding: 60px 2px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .footer__link {
+        margin-top: 29px;
+
+        &--dev {
+          margin-top: 60px;
+        }
+      }
+    }
+  }
+}
