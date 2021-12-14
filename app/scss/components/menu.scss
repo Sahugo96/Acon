@@ -97,12 +97,23 @@
     left: 0;
     z-index: 2;
     transition: height 0.3s linear;
+
+    
   }
   
   &__item {
     padding-bottom: 20px;
     margin-bottom: 19px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+
+    & + .menu__elem {
+      margin-top: 37px;
+    }
+
+    .menu__elem {
+      margin-bottom: 14px;
+      padding-left: 2px;
+    }
   }
 
   &__item-btn {
@@ -143,33 +154,47 @@
       transform: translateY(-50%) rotate(-45deg);
     }
 
-    &-- {
+    &--active {
+
+      & + .menu__list {
+        margin-top: 23px;
+        margin-bottom: 3px;
+        max-height: none;
+      }
+
+      &::before {
+        right: -2px;
+      }
+
+      &::after {
+        right: 3px;
+      }
+    }
+
+    &--warm {
+      background-image: url(../images/warm.svg);
       background-repeat: no-repeat;
       background-position: 3px center;
+    }
 
-      &active {
+    &--tap {
+      background-image: url(../images/tap.svg);
+      background-repeat: no-repeat;
+      background-position: 3px center;
+    }
 
-        & + .menu__list {
-          margin-top: 24px;
-          max-height: none;
-        }
+    &--bottle {
+      padding-top: 4px;
+      background-image: url(../images/bottle.svg);
+      background-repeat: no-repeat;
+      background-position: 3px center;
+    }
 
-        &::before {
-          right: -2px;
-        }
-
-        &::after {
-          right: 3px;
-        }
-      }
-      
-      &warm {
-        background-image: url(../images/warm.svg);
-      }
-  
-      &tap {
-        background-image: url(../images/tap.svg);
-      }
+    &--coil {
+      padding-top: 4px;
+      background-image: url(../images/coil.svg);
+      background-repeat: no-repeat;
+      background-position: 4px center;
     }
   }
 
@@ -180,9 +205,11 @@
   }
 
   &__elem {
-    padding: 4px 2px;
-    
-    margin-bottom: 17px;
+    margin-bottom: 19px;
+    padding: 4px 2px 4px 3px;
+  }
+  
+  &__link {
     font-size: 14px;
     color: #2B2E34;
   }
