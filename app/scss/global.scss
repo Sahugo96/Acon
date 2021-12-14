@@ -27,6 +27,7 @@ body {
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
+  position: relative;
 
   @include _430 {
     padding: 0 20px;

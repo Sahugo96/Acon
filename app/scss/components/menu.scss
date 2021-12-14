@@ -52,8 +52,138 @@
     }
   }
 
-  &__list {
+  &--active {
+    order: 2;
+
+    .bars {
+
+      &__item {
+        height: 0;
+      
+        &::after,
+        &::before {
+          right: -4px;
+          left: auto;
+          top: -4px;
+          // width: 34px;
+          // height: 2px;
+          // border-radius: 3px;
+          // background-color: #2B2E34;
+    
+          @include _430 {
+            width: 26px;
+          }
+        }
+    
+        &::before {
+          transform: rotate(45deg);
+        }
+      
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__items {
+    max-width: 414px;
+    padding: 62px 20px 20px 18px;
+    background-color: #fff;
+    width: 100%;
     display: none;
     position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 2;
+    transition: height 0.3s linear;
+  }
+  
+  &__item {
+    padding-bottom: 20px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  }
+
+  &__item-btn {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    border: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    outline: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #2B2E34;
+    margin-bottom: 0;
+    padding: 2px 20px 0px 44px;
+
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 60%;
+      width: 9px;
+      height: 2px;
+      border-radius: 3px;
+      transition: right 0.3s linear;
+      background-color: #2B2E34;
+    }
+
+    &::before {
+      right: 3px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      right: -2px;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    &-- {
+      background-repeat: no-repeat;
+      background-position: 3px center;
+
+      &active {
+
+        & + .menu__list {
+          margin-top: 24px;
+          max-height: none;
+        }
+
+        &::before {
+          right: -2px;
+        }
+
+        &::after {
+          right: 3px;
+        }
+      }
+      
+      &warm {
+        background-image: url(../images/warm.svg);
+      }
+  
+      &tap {
+        background-image: url(../images/tap.svg);
+      }
+    }
+  }
+
+  &__list {
+    transition: max-height 0.3s linear , margin-top 0.3s linear;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &__elem {
+    padding: 4px 2px;
+    
+    margin-bottom: 17px;
+    font-size: 14px;
+    color: #2B2E34;
   }
 }
