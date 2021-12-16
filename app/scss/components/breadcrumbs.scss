@@ -4,15 +4,16 @@
   @include _430 {
     display: none;
   }
-
+  
   &__items {
     display: flex;
   }
-
+  
   &__item {
     padding-right: 20px;
     position: relative;
-
+    color: #858A93;
+    
     &:not(:last-child):after {
       content: '/';
       position: absolute;
@@ -21,17 +22,16 @@
       font-size: 15px;
       color: rgba(34, 41, 51, 0.6);
     }
-
+    
     &:last-child {
-      font-weight: 600;
+      color: #2B2E34;
     }
   }
-
+  
   &__link {
     font-size: 15px;
-    color: #858A93;
     padding-bottom: 3px;
-    @include line-camp;
+    @include line-camp(1);
     @extend %link-style;
   }
 }

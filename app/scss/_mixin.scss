@@ -4,10 +4,10 @@
   }
 }
 
-@mixin line-camp {
+@mixin line-camp($count) {
   display: -webkit-box;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: $count;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

@@ -4,6 +4,14 @@
   &--active {
     background-color: #FBFBFB;
 
+    .header__top {
+      justify-content: start;
+    }
+
+    .menu {
+      display: none;
+    }
+
     @include _430 {
       background-color: #fff;
     }
@@ -72,9 +80,11 @@
     right: 0;
     background-color: #FBFBFB;
     display: none;
-
+    z-index: 3;
+    
     @include _430 {
       background-color: #fff;
+      height: calc(100vh - 179px);
       padding: 0 20px;
       top: 179px;
     }

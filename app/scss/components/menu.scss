@@ -65,10 +65,10 @@
           right: -4px;
           left: auto;
           top: -4px;
-          // width: 34px;
-          // height: 2px;
-          // border-radius: 3px;
-          // background-color: #2B2E34;
+          width: 34px;
+          height: 2px;
+          border-radius: 3px;
+          background-color: #2B2E34;
     
           @include _430 {
             width: 26px;
@@ -88,6 +88,7 @@
 
   &__items {
     max-width: 414px;
+    height: calc(100vh - 50px);
     padding: 62px 20px 20px 18px;
     background-color: #fff;
     width: 100%;
@@ -97,8 +98,7 @@
     left: 0;
     z-index: 2;
     transition: height 0.3s linear;
-
-    
+    overflow: scroll;
   }
   
   &__item {

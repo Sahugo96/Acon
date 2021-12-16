@@ -230,19 +230,13 @@
       right: 0px;
       transform: translateY(-50%) rotate(-45deg);
     }
-
-    &--active {
-      &::before {
-        right: 0px;
-      }
-
-      &::after {
-        right: 6px;
-      }
-    }
-
+    
     @include _430 {
       display: block;
+    }
+    
+    &--active {
+      display: none;
     }
   }
 
@@ -286,7 +280,7 @@
 
   &__more {
     max-width: 102px;
-    display: block;
+    display: none;
     padding: 0 ;
     width: 100%;
     margin: 34px auto 0;
@@ -297,6 +291,10 @@
     outline: transparent;
     background-color: transparent;
     border-bottom: 2px solid #2B2E34;
+    
+    @include _430 {
+      display: block;
+    }
   }
 }
 

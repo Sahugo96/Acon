@@ -29,7 +29,6 @@
     position: relative;
     padding-left: 36px;
     font-size: 15px;
-    color: #2B2E34;
 
     &::before {
       content: '';
@@ -185,6 +184,67 @@
       }
     } 
   }
+
+  &__btns {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;  
+    height: 0;
+    overflow: hidden;
+    
+    &--active {
+      height: auto;
+      padding: 28px 40px 33px 22px;
+      display: flex;
+    }
+  }
+
+  &__submit {
+    border-radius: 2px;
+    background-color: #38D3E8;
+    border: 0;
+    outline: transparent;
+    color: #fff;
+    letter-spacing: 0.4px;
+    padding: 17px 45px 17px 69px;
+    background-image: url(../images/arrows-white.svg);
+    background-repeat: no-repeat;
+    background-position: 28px center;
+  }
+
+  &__reset {
+    position: relative;
+    padding: 5px 32px 5px 0px;
+    color: #7E838C;
+    background-color: transparent;
+    border: 0;
+    outline: transparent;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 15px;
+      width: 21px;
+      height: 2px;
+      background-color: #7E838C;
+    }
+    
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .filter-title {
@@ -248,7 +308,6 @@
 
   .irs--flat .irs-line {
     height: 3px;
-    background-color: $main-light;
     top: 1px;
   }
 

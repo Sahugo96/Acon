@@ -29,13 +29,13 @@
   }
 
   &__logo {
-    max-width: 283px;
+    max-width: 280px;
     max-height: 66px;
     margin-left: -4px;
     margin-bottom: 56px;
 
     @include _430 {
-      margin-bottom: 37px;
+      margin-bottom: 38px;
     }
   }
 
@@ -51,10 +51,10 @@
     }
 
     &--phone {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
 
       span {
-        padding-left: 2px;
+        padding-left: 3px;
       }
     }
 
@@ -87,19 +87,21 @@
 
   &__work-time {
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 48px;
+    color: #7E838C;
 
     @include _430 {
       margin-bottom: 38px;
     }
 
     span {
-      margin-left: 3px;
+      margin-left: 4px;
     }
   }
 
   &__media {
+    @extend %Gilroy-400;
 
     @include _430 {
       margin-bottom: 30px;
@@ -108,17 +110,19 @@
 
   &__media-title {
     display: block;
+    font-weight: 600;
     font-size: 18px;
-    color: #2B2E34;
+    letter-spacing: 0.4px;
     margin-bottom: 20px;
   }
 
   &__social {
-    max-width: 238px;
+    max-width: 235px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #7E838C;
   }
 
   &__contact {
