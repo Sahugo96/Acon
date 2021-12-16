@@ -98,7 +98,10 @@
     left: 0;
     z-index: 2;
     transition: height 0.3s linear;
-    overflow: scroll;
+
+    @include _430 {
+      overflow: scroll;
+    }
   }
   
   &__item {
